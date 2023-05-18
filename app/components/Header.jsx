@@ -49,8 +49,8 @@ export const Header = () => {
   }, [user?.email, uplogo]);
   console.log("menu", menu?.menuname);
   return (
-    <div className="container mb-2">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div className="container mb-2 ">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
         <div className="container-fluid">
           <a class="navbar-brand" href="#">
             <Image

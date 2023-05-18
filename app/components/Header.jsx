@@ -50,15 +50,15 @@ export const Header = () => {
   console.log("menu", menu?.menuname);
   return (
     <div className="container mb-2 ">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark  sticky-top">
         <div className="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a className="navbar-brand" href="#">
             <Image
               src={user ? data?.logo : ""}
               alt="Logo"
               width="30"
               height="24"
-              class="d-inline-block align-text-top me-2"
+              className="d-inline-block align-text-top me-2"
             />
             {user ? (
               <span className="fw-semibold text-warning fst-italic">
@@ -82,16 +82,16 @@ export const Header = () => {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <Link className="nav-link" href="/">
+                <Link className="nav-link text-white" href="/">
                   Home
                   <span className="visually-hidden">(current)</span>
                 </Link>
               </li>
 
               {menu?.menuname.map((item, idx) => (
-                <li key={idx} className="nav-item">
+                <li key={idx} className="nav-item text-white">
                   {user && (
-                    <Link className="nav-link" href="/about">
+                    <Link className="nav-link text-white" href="/about">
                       {item}
                     </Link>
                   )}
@@ -99,7 +99,7 @@ export const Header = () => {
               ))}
               {user ? (
                 <li className="nav-item">
-                  <Link className="nav-link" href="/dashboard">
+                  <Link className="nav-link text-white" href="/dashboard">
                     Dashboard
                   </Link>
                 </li>
@@ -112,7 +112,7 @@ export const Header = () => {
                 <button
                   onClick={handleLogOut}
                   type="button"
-                  class="btn btn-sm btn-danger"
+                  className="btn btn-sm btn-danger"
                 >
                   SignOut
                 </button>
@@ -120,7 +120,7 @@ export const Header = () => {
             ) : (
               <div className="d-flex gap-2">
                 <Link className="nav-link" href="/login">
-                  <button type="button" class="btn btn-sm btn-outline-info">
+                  <button type="button" className="btn btn-sm btn-outline-info">
                     Sign In
                   </button>
                 </Link>

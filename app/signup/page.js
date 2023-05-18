@@ -57,26 +57,26 @@ const RegisterPage = () => {
         <h5 className="text-center mt-5">Sign up</h5>
         <div className="d-flex justify-content-center mt-4">
           <form onSubmit={handleSubmit}>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">
+            <div className="mb-3">
+              <label for="exampleFormControlInput1" className="form-label">
                 Email
               </label>
               <input
                 type="email"
                 name="email"
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="name@example.com"
               />
             </div>
-            <div class="mb-3">
-              <label for="InputPassword" class="form-label">
+            <div className="mb-3">
+              <label for="InputPassword" className="form-label">
                 Password
               </label>
               <input
                 type="password"
                 name="password"
-                class="form-control"
+                className="form-control"
                 id="InputPassword"
               />
               <small className="mt-2">
@@ -91,14 +91,14 @@ const RegisterPage = () => {
             </div>
 
             <input
-              class="btn btn-primary w-100"
+              className="btn btn-primary w-100"
               type="submit"
               value="Submit"
             ></input>
             <button
               onClick={handleGoogleSignIn}
               type="button"
-              class="btn btn-outline-dark w-100 mt-2"
+              className="btn btn-outline-dark w-100 mt-2"
             >
               Sign in with <FcGoogle />{" "}
             </button>

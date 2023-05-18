@@ -63,7 +63,7 @@ const LoginPage = () => {
               Don't have an account?{" "}
               <Link
                 href="/signup"
-                className="text-primary text-decoration-none  fw-bold"
+                className="text-info text-decoration-none  fw-bold"
               >
                 SignUp
               </Link>

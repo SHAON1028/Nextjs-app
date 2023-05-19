@@ -1,11 +1,12 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../context/UserContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 const LoginPage = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
+  const [error, setError] = useState(null);
   const router = useRouter();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,6 +69,8 @@ const LoginPage = () => {
                 SignUp
               </Link>
             </small>
+            <br />
+            {error && <small className="text-danger">{error}</small>}
           </div>
           <input
             className="btn btn-primary w-100"

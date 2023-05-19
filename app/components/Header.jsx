@@ -52,7 +52,7 @@ export const Header = () => {
     <div className="container mb-2 ">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary  sticky-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" href="/">
             <Image
               src={user ? data?.logo : ""}
               alt="Logo"
@@ -67,7 +67,7 @@ export const Header = () => {
             ) : (
               <span className="text-danger">not found</span>
             )}
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
